@@ -60,7 +60,7 @@ My current approach is to embed Anvil forms into the static site using iframes. 
 
 # What About Production?
 
-I'm not at the point where I need a production version yet, but here are the two approaches I plan to investigate.
+I'm not at the point where I need a production version yet, but here are the two approaches I plan to investigate.  I plan to choose between these two options based on results from user testing on the site (to see if I'm bumping up against billing limits too early).
 
 ## Prodution Anvil App
 
