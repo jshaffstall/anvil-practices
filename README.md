@@ -14,9 +14,9 @@ In a production environment you want to have a development version of the code, 
 
 You can have a development version and a published version of an app.  This setup has the following drawbacks:
 
-1. The development version and the production version share the same data table schema.  This makes it difficult to make radical changes in development without breaking production.  
+1. The development version and the published version share the same data table schema.  This makes it difficult to make radical changes in development without breaking the published version.  
 
-2. The development version and the production version share the same data table contents.  While testing you'll see live data, and vice versa.
+2. The development version and the published version share the same data table contents.  While testing you'll see live data, and vice versa.
 
 3. The only way to access the development version of the app is to run it in the Anvil editor.  There's no way to generate a URL that external users can use to test your changes.
 
