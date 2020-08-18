@@ -66,7 +66,7 @@ doing this, but I needed a slight modification to the one to show it to prevent 
 
 Here's the modification:
 
-```{.line-numbers}
+```javascript {.line-numbers}
   function showSidebar() {
     var ln = $('.structure > .nav-holder > .left-nav');
     if (ln.is(":visible") || $('.nav-shield').is(".shown")) return;
