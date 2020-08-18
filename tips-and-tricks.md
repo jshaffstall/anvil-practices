@@ -86,3 +86,8 @@ You can call this from a form_show event like this:
 self.call_js('showSidebar')
 ```
 
+To hide the sidebar, use:
+
+```
+self.call_js('hideSidebar')
+```
