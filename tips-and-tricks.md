@@ -32,10 +32,11 @@ The initial-fill role will cause the first component in the FlowPanel to take up
 
 ## [Copy To Clipboard](https://anvil.works/forum/t/copy-to-clipboard-button/1817/10)
 
-Add the following Javascript funtion to the bottom of your standard-page.html:
+Add the following Javascript funtion your Native Libraries section of your app:
 
 ```
-function copyText(texttocopy) {
+<script>
+  function copyText(texttocopy) {
     // Create new element
     var el = document.createElement('textarea');
     // Set value (string to be copied)
@@ -50,7 +51,8 @@ function copyText(texttocopy) {
     document.execCommand('copy');
     // Remove temporary element
     document.body.removeChild(el);
-  }
+  }    
+</script>
 ```
   
 Then from any Anvil form, use code like this to copy something to the clipboard (the item to be copied must be a string):
