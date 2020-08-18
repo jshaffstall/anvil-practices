@@ -66,19 +66,19 @@ doing this, but I needed a slight modification to the one to show it to prevent 
 
 Here's the modification:
 
-```javascript {.line-numbers}
-  function showSidebar() {
-    var ln = $('.structure > .nav-holder > .left-nav');
-    if (ln.is(":visible") || $('.nav-shield').is(".shown")) return;
-    $('.nav-shield').addClass("shown");
-    ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 0}, function() {
-      ln.removeClass("in-transition");
-    });
-    $(window).trigger('resize');
-  }
+```
+1  function showSidebar() {
+2    var ln = $('.structure > .nav-holder > .left-nav');
+3    if (ln.is(":visible") || $('.nav-shield').is(".shown")) return;
+4    $('.nav-shield').addClass("shown");
+5    ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 0}, function() {
+6      ln.removeClass("in-transition");
+7    });
+8    $(window).trigger('resize');
+9  }
 ```
 
-The addition is that check to return if it's already visible (meaning there's no work to be done, so we don't want to mess with it).  This prevents the flicker as the resize event gets triggered again.
+The addition is that line 3 check to return if it's already visible (meaning there's no work to be done, so we don't want to mess with it).  This prevents the flicker as the resize event gets triggered again.
 
 You can call this from a form_show event like this:
 
