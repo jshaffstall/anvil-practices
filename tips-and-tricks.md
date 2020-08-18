@@ -1,3 +1,7 @@
+# Tips & Tricks
+
+Very little of this is my work, most came from the Anvil forums.  I've linked to the forum posts where I could find them.
+
 ## Striped Data Rows
 
 Add a role called striped that applies to RepeatingPanel, then add the following CSS to your assets:
@@ -8,7 +12,7 @@ Add a role called striped that applies to RepeatingPanel, then add the following
 }
 ```
 
-## Expanding TextBox
+## [Expanding TextBox](https://anvil.works/forum/t/expandable-text-boxes/6059/8)
 
 TextBox components don't like to expand when they are inside a FlowPanel.  To get them to do so, add the following roles to apply to FlowPanels:
 
