@@ -32,7 +32,7 @@ The initial-fill role will cause the first component in the FlowPanel to take up
 
 ## [Copy To Clipboard](https://anvil.works/forum/t/copy-to-clipboard-button/1817/10)
 
-Add the following Javascript funtion your Native Libraries section of your app:
+Add the following Javascript funtion to your Native Libraries section of your app:
 
 ```
 <script>
