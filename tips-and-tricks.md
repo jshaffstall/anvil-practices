@@ -1,4 +1,4 @@
-# Striped Data Rows
+## Striped Data Rows
 
 Add a role called striped that applies to RepeatingPanel, then add the following CSS to your assets:
 
@@ -7,15 +7,15 @@ Add a role called striped that applies to RepeatingPanel, then add the following
 }
 `
 
-# Expanding TextBox
+## Expanding TextBox
 
 TextBox components don't like to expand when they are inside a FlowPanel.  To get them to do so, add the following roles to apply to FlowPanels:
 
 `.anvil-role-initial-fill .flow-panel-gutter > div:first-child {
   flex-grow: 1 !important;
-}
+}`
 
-.anvil-role-second-fill .flow-panel-gutter > div:nth-child(2) {
+`.anvil-role-second-fill .flow-panel-gutter > div:nth-child(2) {
   flex-grow: 1 !important;
 }
 `
