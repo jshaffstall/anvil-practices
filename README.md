@@ -80,7 +80,7 @@ The disadvantages of this approach are:
 
 ## Open Source Anvil App Engine
 
-Anvil has released their engine to run Anvil apps as open source.  This means you can run an Anvil app on any Linux server.  You could run it from your home machine if you wanted, although that would be an odd choice for a production app.  More typically you could use a cloud based Linux server, such as from DigitalOcean.  
+Anvil has released their engine to run Anvil apps as open source.  This means you can run an Anvil app on any Linux server.  You could run it from your home machine if you wanted, although that would be an odd choice for a production app.  More typically you could use a cloud based Linux server, such as from DigitalOcean or AWS Lightsail.  
 
 The advantages of this approach:
 
@@ -90,6 +90,6 @@ The advantages of this approach:
 
 The disantantages of this approach:
 
-1.  You're out of the Anvil hosted toolset now, so getting access to what's happening in your data tables requires poking around in the somewhat abstract Anvil Postgres database.  It's possible, but not convenient or intuitive.  So you'd want to build your diagnostic tools into the app itself, so you can it all through the web interface.
+1.  You're out of the Anvil hosted toolset now, so getting access to what's happening in your data tables requires poking around in the somewhat abstract Anvil Postgres database.  It's possible, but not convenient or intuitive.  So you'd want to build your diagnostic tools into the app itself, so you can do it all through an admin interface in your own web app.
 
 
