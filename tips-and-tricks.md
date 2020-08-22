@@ -30,6 +30,24 @@ TextBox components don't like to expand when they are inside a FlowPanel.  To ge
 
 The initial-fill role will cause the first component in the FlowPanel to take up the remainder of the space, while the second-fill expands the second component.  
 
+## Triggering Events in Data Grid Rows That Call Form Functions
+
+There are times when you want a function in a data grid row template to call something from the form that the data grid is in.  get_open_form() doesn't always work, depending on how you are structuring your app.  This technique works nicely for me.
+
+In the form's init, we setup an event handler on the repeating panel that calls a method on the form:
+
+```
+self.repeating_panel_1.set_event_handler('x-reload', self.reload_mysteries)
+```
+
+Now in the row template we can raise that event on the parent (which is the repeating panel):
+
+```
+self.parent.raise_event('x-reload')
+```
+
+The result is that the form's function gets called, and we don't need to worry about how many levels deep the repeating panel is in the component hierarchy.
+
 ## [Copy To Clipboard](https://anvil.works/forum/t/copy-to-clipboard-button/1817/10)
 
 Add the following Javascript funtion to your Native Libraries section of your app:
@@ -63,8 +81,7 @@ self.call_js('copyText', username.text)
 
 ## Showing & Hiding The Sidebar
 
-The sidebar navigation pane in Anvil is very useful, but now and then I had pages where I wanted to not show it.  There are Javascript functions already in Anvil for 
-doing this, but I needed a slight modification to the one to show it to prevent a flickering effect.
+The sidebar navigation pane in Anvil is very useful, but now and then I had pages where I wanted to not show it.  There are Javascript functions already in Anvil for doing this, but I needed a slight modification to the one to show it to prevent a flickering effect.
 
 Here's the modification:
 
