@@ -110,3 +110,8 @@ To hide the sidebar, use:
 ```
 self.call_js('hideSidebar')
 ```
+
+## [Refreshing the Anvil Session](https://anvil.works/forum/t/is-it-possible-to-avoid-session-timeouts/4468/4)
+
+If the web app might need to stay up in the browswer without any user interaction for a while, the Anvil session might timeout.  The forum post linked above has two possible ways of handling this.
+
