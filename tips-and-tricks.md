@@ -115,3 +115,6 @@ self.call_js('hideSidebar')
 
 If the web app might need to stay up in the browswer without any user interaction for a while, the Anvil session might timeout.  The forum post linked above has two possible ways of handling this.
 
+[Note the potential issues with using anvil.server.reset_session()](https://anvil.works/docs/server/sessions-and-cookies#session-expiry).  In particular, data table rows won't be valid anymore.  The best option will typically be to refresh the page to reload everything under the new session.
+
+Need to make sure that reloading maintains the current hash routing in the URL.
