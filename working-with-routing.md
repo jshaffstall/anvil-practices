@@ -1,6 +1,18 @@
 # Working With Hash Routing
 
-The Hash Routing dependency is amazing and will be used for all my projects.  But, once you start using it you need to make some changes.
+The Hash Routing dependency is amazing and will be used for all my projects.  Here are some of the changes I've made in my projects to better work with hash routing.
+
+## Handling Session Timeouts
+
+If your app stays open but inactive for 30 minutes, the session will timeout.  All the data rows you've retrieved will no longer be valid, the user won't be logged in, etc.  The default Anvil handling of this is to refresh the page, but that refreshes at the based URL of your app, not the URL with hash routing for the current page. 
+
+Add the following to your __init__ for your main routing form to fix this:
+
+```
+routing.on_session_expired()
+```
+
+This just gives the routing library permission to override Anvil's default handling of a session timeout.  Now when the user clicks to refresh the session, it'll reload the page with the hash routing intact.
 
 ## Handling Server Authentication Errors
 
@@ -18,15 +30,7 @@ from HashRouting import routing
 error_redirect = ""
 
 def error_handler(err):
-  if type(err) == anvil.server.SessionExpiredError:
-    alert('Your session has timed out. Please refresh the page to continue', 
-          title='Session Expired' , 
-          buttons=[('Refresh Now', None)],
-          dismissible=False)
-    
-    #self.call_js('refreshSession', anvil.server.get_app_origin()+"#"+routing.get_url_hash())
-    routing.reload_page(True)
-  elif type(err) == anvil.users.exceptions.AuthenticationFailed:
+  if type(err) == anvil.users.exceptions.AuthenticationFailed:
     alert("You don't seem to have the permissions to do that.  Are you still logged in?", title="Permission Error")
     routing.set_url_hash(error_redirect)
   else:
