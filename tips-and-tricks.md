@@ -111,12 +111,6 @@ To hide the sidebar, use:
 self.call_js('hideSidebar')
 ```
 
-## [Refreshing the Anvil Session](https://anvil.works/forum/t/routing-navigation-with-url-hash/3949/37)
-
-If the web app might need to stay up in the browswer without any user interaction for a while, the Anvil session might timeout.  Data table rows won't be valid anymore.  The best option will typically be to refresh the page to reload everything under the new session.
-
-The forum post linked above shows the use of routing.on_session_expired().  Put it in the __init__ method of your main routing form, and you'll get the behavior you expect when the Anvil session expires and the user clicks to refresh the session.
-
 ## HTTP Endpoints & JSON Requests
 
 When writing an HTTP endpoint that is going to take JSON data in the request, you must enable CORS and return the right values in the pre-flight OPTIONS request.  This is an example:
