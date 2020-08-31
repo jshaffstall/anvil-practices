@@ -111,10 +111,26 @@ To hide the sidebar, use:
 self.call_js('hideSidebar')
 ```
 
-## [Refreshing the Anvil Session](https://anvil.works/forum/t/is-it-possible-to-avoid-session-timeouts/4468/4)
+## [Refreshing the Anvil Session](https://anvil.works/forum/t/routing-navigation-with-url-hash/3949/37)
 
-If the web app might need to stay up in the browswer without any user interaction for a while, the Anvil session might timeout.  The forum post linked above has two possible ways of handling this.
+If the web app might need to stay up in the browswer without any user interaction for a while, the Anvil session might timeout.  Data table rows won't be valid anymore.  The best option will typically be to refresh the page to reload everything under the new session.
 
-[Note the potential issues with using anvil.server.reset_session()](https://anvil.works/docs/server/sessions-and-cookies#session-expiry).  In particular, data table rows won't be valid anymore.  The best option will typically be to refresh the page to reload everything under the new session.
+The forum post linked above shows the use of routing.on_session_expired().  Put it in the __init__ method of your main routing form, and you'll get the behavior you expect when the Anvil session expires and the user clicks to refresh the session.
 
-Need to make sure that reloading maintains the current hash routing in the URL.
+## HTTP Endpoints & JSON Requests
+
+When writing an HTTP endpoint that is going to take JSON data in the request, you must enable CORS and return the right values in the pre-flight OPTIONS request.  This is an example:
+
+```
+@anvil.server.http_endpoint("/order/total", methods=["POST", "OPTIONS"], enable_cors=True)
+def total_order(**kw):
+  # This allows JSON data to be sent to this endpoint
+  if anvil.server.request.method == 'OPTIONS':
+    r = anvil.server.HttpResponse()
+    r.headers['access-control-allow-headers'] = 'Content-Type'
+    return r
+    
+  return "whatever"
+```
+
+You can return whatever you want (a dictionary, for example) from the endpoint itself.  The OPTIONS request is made by the browser before the actual request, to see if the API call should be allowed.
