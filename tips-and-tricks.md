@@ -129,7 +129,7 @@ def total_order(**kw):
 
 You can return whatever you want (a dictionary, for example) from the endpoint itself.  The OPTIONS request is made by the browser before the actual request, to see if the API call should be allowed.
 
-## Datetime Comparisons
+## [Datetime Comparisons](https://anvil.works/forum/t/time-zone-issues/452/3)
 
 Comparing datetimes generated locally with ones fetched from the server means you have to generate the local ones timezone aware.  Use this code to get the current datetime:
 
