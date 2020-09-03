@@ -12,13 +12,31 @@ There are times when I want a multi table link to appear as text based on whethe
 
 That same technique can be used to react to fields that may be None, such as dates.
 
-## Date formatting
+## Datetime formatting
 
-The default formatting for dates in data grids is never what I want for user facing forms.  I typically use a label on that column in the template and set the text binding to this:
+The default formatting for datetimes in data grids is never what I want for user facing forms.  I typically use a label on that column in the template and set the text binding to this:
 
 ```
 self.item['created_on'].strftime("%b %d %Y %H:%M:%S")
 ```
+
+Or, to get AM/PM times:
+
+```
+self.item['created_on'].strftime("%b %d %Y %I:%M %p")
+```
+
+## Displaying datetimes in datagrids in the user's local timezone
+
+Dates are inconsistent in Anvil right now.  Date pickers will display a date in the user's local timezone, but data grids display them in the server's timezone (UTC).  This inconsistency causes you to see different times in different spots on your app.  
+
+To get a datagrid to display a datetime in the user's local timezone, you must use a label on the column in the template.  But, you cannot use data binding since you have to call anvil.tz.tzlocal(), which isn't available in a data binding.  So you have to set the label's text in the __init__ method of the row template:
+
+```
+self.label_2.text = self.item['expires'].astimezone(anvil.tz.tzlocal()).strftime("%b %d %Y %I:%M %p") 
+```
+
+This got to be so annyoing to keep doing over and over, I wrote a custom component that retains the ability to data bind the date but also automates display in the user's local timezone: https://anvil.works/build#clone:OITEW55DKQRVGZFI=VBFGNSDV2H5XDWYM6S67HJ5Z
 
 ## Optional dates
 
