@@ -1,12 +1,3 @@
-## In a row template, self.parent is None
-
-I get this error all the time when I try to access the repeating panel the row template is in too early.  self.parent will be None until the form_show event for the row template.  Before that, it's None.
-
-Times that are too early:
-
-- In the __init__ method
-- In data bindings
-
 ## [Striped Data Rows](https://anvil.works/forum/t/alternate-row-colors-add-timestamp-on-check-event/4651/3)
 
 Add a role called striped that applies to RepeatingPanel, then add the following CSS to your assets:
@@ -52,4 +43,13 @@ self.parent.raise_event('x-reload')
 ```
 
 The result is that the form's function gets called, and we don't need to worry about how many levels deep the repeating panel is in the component hierarchy.
+
+## In a row template, self.parent is None
+
+I get this error all the time when I try to access the repeating panel the row template is in too early.  self.parent will be None until the form_show event for the row template.  Before that, it's None.
+
+Times that are too early:
+
+- In the __init__ method
+- In data bindings
 
