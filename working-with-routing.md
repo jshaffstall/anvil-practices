@@ -39,6 +39,7 @@ def error_handler(err):
 
 In my forms, I set ErrorHandling.error_redirect in the __init__ function, and then do whatever servers calls I need to do in the form_show function.  If an authentication exception is returned, the error handling code will display the vague permissions error and redirect them.
 
+
     
       
 
