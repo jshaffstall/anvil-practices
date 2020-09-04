@@ -90,3 +90,18 @@ Comparing datetimes generated locally with ones fetched from the server means yo
 ```
 datetime.datetime.now(anvil.tz.tzlocal())
 ```
+
+## Filling Dropdowns with None option
+
+When filling a dropdown from a data table search, there's a standard formula.  In the following assume that results has the results of a data table search:
+
+```
+self.dropdown_1.items = [(r['title'], r) for r in results]
+```
+
+This gets the title displaying but the entire row returned as the selected value.  Sometimes you want the dropdown to have the option to have none of the results selected.  Use this technique:
+
+```
+self.dropdown_1.items = ['', None] + [(r['title'], r) for r in results]
+```
+
