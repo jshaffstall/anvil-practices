@@ -1,4 +1,4 @@
-## [Clickable Data Rows] (https://anvil.works/forum/t/new-events-for-forms/2021/2)
+## [Clickable Data Rows](https://anvil.works/forum/t/new-events-for-forms/2021/2)
 
 You can make the entire data row clickable by embedding it inside a Link, using the technique described in the linked post.
 
