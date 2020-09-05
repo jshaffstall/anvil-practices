@@ -1,3 +1,7 @@
+## [Clickable Data Rows] (https://anvil.works/forum/t/new-events-for-forms/2021/2)
+
+You can make the entire data row clickable by embedding it inside a Link, using the technique described in the linked post.
+
 ## [Striped Data Rows](https://anvil.works/forum/t/alternate-row-colors-add-timestamp-on-check-event/4651/3)
 
 Add a role called striped that applies to RepeatingPanel, then add the following CSS to your assets:
