@@ -56,7 +56,7 @@ The dynamic portions include:
 2) The checkout process
 3) Possibly a My Account section (although that might end up being a sub app linked to from the static site)
 
-My current approach is to embed Anvil forms into the static site using iframes.  All the iframes share the same session, so the login from one will be reflected in the others.  This seems to work reasonably well.
+My current approach is to use Javascript to create dynamic content that calls HTTP endpoints on the Anvil app as needed.
 
 # What About Production?
 
@@ -77,6 +77,8 @@ The disadvantages of this approach are:
 2. Upgrading those limits requires spending more money on Anvil.  If your app is such that you don't hit those limits until you're making money, then you're fine.  If your app is such that you hit those limits early (a storage intensive app, for example), then you may need to upgrade before your revenue supports it.
 
 3. The process to update the production app involves pulling the development version to your local machine and then pushing it to the production app.  
+
+See this page for an explanation of setting this up with Git: https://anvil.works/docs/how-to/development-production
 
 ## Open Source Anvil App Engine
 
