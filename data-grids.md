@@ -56,4 +56,4 @@ Times that are too early:
 
 - In the __init__ method
 - In data bindings
-
+- Setting self.parent.items inside the row template and then trying to use self.parent
