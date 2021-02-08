@@ -12,8 +12,6 @@ https://anvil.works/forum/t/anvil-orm-library/6641
 
 Use popovers for alerts inside alerts: https://anvil.works/forum/t/calling-confirm-from-alert-box/7062/5?u=jshaffstall
 
-## Event system
+## Publish/Subscribe Event system
 
-https://anvil.works/forum/t/event-propogation/5238
-
-
+https://anvil.works/forum/t/publish-subscribe-messaging/6693
