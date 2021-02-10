@@ -62,6 +62,8 @@ My current approach is to use Javascript to create dynamic content that calls HT
 
 I'm not at the point where I need a production version yet, but here are the two approaches I plan to investigate.  I plan to choose between these two options based on results from user testing on the site (to see if I'm bumping up against billing limits too early).
 
+Update: I'm currently using a production Anvil app.  [This page describes my workflow](https://github.com/jshaffstall/anvil-practices/blob/master/dev_vs_prod.md)
+
 ## Prodution Anvil App
 
 This is what as described above, where you have an Anvil App that is the production version, and you push changes to it via Git and a local repository.  This has some gotchas I'll need to investigate.
