@@ -15,3 +15,7 @@ Use popovers for alerts inside alerts: https://anvil.works/forum/t/calling-confi
 ## Publish/Subscribe Event system
 
 https://anvil.works/forum/t/publish-subscribe-messaging/6693
+
+## Remember To Use anvil.js
+
+Javascript integration has come a long way, remember to use it: https://anvil.works/docs/client/javascript/accessing-javascript
