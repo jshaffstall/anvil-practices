@@ -10,7 +10,7 @@ https://anvil.works/forum/t/anvil-orm-library/6641
 
 ## Popovers
 
-Use popovers for alerts inside alerts: https://anvil.works/forum/t/calling-confirm-from-alert-box/7062/5?u=jshaffstall
+Use popovers for alerts inside alerts: https://anvil.works/forum/t/calling-confirm-from-alert-box/7062/5
 
 ## Publish/Subscribe Event system
 
