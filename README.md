@@ -20,7 +20,7 @@ You can have a development version and a published version of an app.  This setu
 
 3. The only way to access the development version of the app is to run it in the Anvil editor.  There's no way to generate a URL that external users can use to test your changes.
 
-## How Do People Normally Work Around Those Limitations
+## How People Normally Work Around Those Limitations
 
 People normally make a copy of each app.  One of those copies is the development/test version, and the other is the production version.  In the development/test version, the published version is what external testers would see, while the unpublished version is what the developer sees.  
 
