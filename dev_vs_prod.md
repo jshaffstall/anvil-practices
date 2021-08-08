@@ -12,6 +12,8 @@ I use the [Git Setup portion of the official Anvil](https://anvil.works/docs/how
 
 If there are no data table changes, you can use the General Workflow section from the above link to push code changes from dev to prod.  That page says you shouldn't have to use --force.  That's true only if you haven't made any changes in the IDE to prod.  If you have made changes in the IDE to prod, even something as simple as changing the project name, you'll have to use --force.
 
+Do not have the Prod app open in the Anvil IDE when you are trying to push Dev changes!
+
 ## Deploying Code & Data Table Changes From Dev To Prod
 
 When you have to modify the data table schema in dev, pushing changes to prod becomes more complicated.  You must:
