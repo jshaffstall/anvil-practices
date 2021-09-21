@@ -102,6 +102,6 @@ self.dropdown_1.items = [(r['title'], r) for r in results]
 This gets the title displaying but the entire row returned as the selected value.  Sometimes you want the dropdown to have the option to have none of the results selected.  Use this technique:
 
 ```
-self.dropdown_1.items = ['', None] + [(r['title'], r) for r in results]
+self.dropdown_1.items = [('', None)] + [(r['title'], r) for r in results]
 ```
 
