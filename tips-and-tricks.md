@@ -91,6 +91,18 @@ Comparing datetimes generated locally with ones fetched from the server means yo
 datetime.datetime.now(anvil.tz.tzlocal())
 ```
 
+## Getting The User's Timezone
+
+The following code will get the user's timezone (as reported by their browser):
+
+```
+    from anvil.js.window import Intl
+    
+    time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone
+```
+
+The timezone is in the TZ format, the same format used by the PyTZ package, so can be sent to the server and used there.
+
 ## Filling Dropdowns with None option
 
 When filling a dropdown from a data table search, there's a standard formula.  In the following assume that results has the results of a data table search:
