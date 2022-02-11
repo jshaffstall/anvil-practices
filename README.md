@@ -4,6 +4,10 @@ This document aims to gather my current best-practices using [Anvil](https://anv
 
 Since a lot of this document will talk about limitations of Anvil, I want to state up front that Anvil is an amazing tool for building web apps in nothing but Python.  They've made a lot of absolutely correct design decisions, and the limitations mentioned in this document are just a matter of Anvil still being a work in progress.  
 
+# The Anvil Beta Editor
+
+All the sections below represent techniques that can still be used in Anvil, especially on the Free or Personal plans.  For those on the Professional plans and above, staging environments available in the Beta editor remove the limitations discussed below and take the pain out of separating Dev/Test/Prod environments.  
+
 # How Many Apps?
 
 Anvil makes it ridiculously easy to partition your large web app into a series of smaller, more focused apps that share the same set of data tables.  Using Anvil for hobby projects, this makes a lot of sense.  Trying to use Anvil for more production level work, though, this runs into issues.
