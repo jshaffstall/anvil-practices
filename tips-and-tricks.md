@@ -4,7 +4,9 @@ Very little of this is my work, most came from the Anvil forums.  I've linked to
 
 ## [Copy To Clipboard](https://anvil.works/forum/t/copy-to-clipboard-button/1817/10)
 
-Add the following Javascript funtion to your Native Libraries section of your app:
+The below is the pre-Javascript bridge method.  Now, you can use the following straight from Python `js.window.navigator.clipboard.writeText(text)`.  Note that you'll need to run the app in a new tab if running from the IDE, to avoid permission issues.
+
+Before the Javascript bridge was introduced into Anvil, you had to add the following Javascript funtion to your Native Libraries section of your app:
 
 ```
 <script>
@@ -104,6 +106,8 @@ The following code will get the user's timezone (as reported by their browser):
 The timezone is in the TZ format, the same format used by the PyTZ package, so can be sent to the server and used there.
 
 ## Filling Dropdowns with None option
+
+Note that Anvil has made this unnecessary.  Dropdowns now have an Include Placeholder checkbox that allows you to specify what the None option for the dropdown says.
 
 When filling a dropdown from a data table search, there's a standard formula.  In the following assume that results has the results of a data table search:
 
