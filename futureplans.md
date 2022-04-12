@@ -1,5 +1,9 @@
 # Things to use for future projects
 
+## Validators
+
+https://anvil.works/forum/t/yet-another-validator-and-formatter/10607
+
 ## Tabulator instead of Datagrids
 
 https://anvil.works/forum/t/tabulator-with-anvil-components/4646
