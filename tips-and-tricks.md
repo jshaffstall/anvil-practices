@@ -2,38 +2,13 @@
 
 Very little of this is my work, most came from the Anvil forums.  I've linked to the forum posts where I could find them.
 
+## Trigger Password Change Dialogue
+
+Anvil's Users service has a built-in password change mechanism.  When the user clicks the link in their email your app will launch, and the first time the app executes `anvil.users.get_user()` on the client the password change dialogue will appear.  To make sure that dialogue appears right away as the user expects, always execute `anvil.users.get_user()` in your startup form/module, even if you don't need to for other reasons.
+
 ## [Copy To Clipboard](https://anvil.works/forum/t/copy-to-clipboard-button/1817/10)
 
-The below is the pre-Javascript bridge method.  Now, you can use the following straight from Python `js.window.navigator.clipboard.writeText(text)`.  Note that you'll need to run the app in a new tab if running from the IDE, to avoid permission issues.
-
-Before the Javascript bridge was introduced into Anvil, you had to add the following Javascript funtion to your Native Libraries section of your app:
-
-```
-<script>
-  function copyText(texttocopy) {
-    // Create new element
-    var el = document.createElement('textarea');
-    // Set value (string to be copied)
-    el.value = texttocopy;
-    // Set non-editable to avoid focus and move outside of view
-    el.setAttribute('readonly', '');
-    el.style = {position: 'absolute', left: '-9999px'};
-    document.body.appendChild(el);
-    // Select text inside element
-    el.select();
-    // Copy text to clipboard
-    document.execCommand('copy');
-    // Remove temporary element
-    document.body.removeChild(el);
-  }    
-</script>
-```
-  
-Then from any Anvil form, use code like this to copy something to the clipboard (the item to be copied must be a string):
-
-```
-self.call_js('copyText', username.text)
-```
+You can use the following straight from Python `js.window.navigator.clipboard.writeText(text)`.  Note that you'll need to run the app in a new tab if running from the IDE, to avoid permission issues.
 
 ## Showing & Hiding The Sidebar
 
