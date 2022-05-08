@@ -1,6 +1,8 @@
 ## [Clickable Data Rows](https://anvil.works/forum/t/new-events-for-forms/2021/2)
 
-You can make the entire data row clickable by embedding it inside a Link, using the technique described in the linked post.
+If using Anvil Extras, can use augment to make the entire data row clickable: https://anvil.works/forum/t/making-rows-in-a-datagrid-clickable/12593/4
+
+Need to investigate if that works as well as a link for having embedded controls that might also be clickable.
 
 ## [Striped Data Rows](https://anvil.works/forum/t/alternate-row-colors-add-timestamp-on-check-event/4651/3)
 
