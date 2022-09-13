@@ -96,3 +96,6 @@ This gets the title displaying but the entire row returned as the selected value
 self.dropdown_1.items = [('', None)] + [(r['title'], r) for r in results]
 ```
 
+## Change Position of Alerts
+
+Using a role and some CSS, you can change the default position of alerts on a case by case basis: https://anvil.works/forum/t/position-of-alert-confirm-notification/14416/2
