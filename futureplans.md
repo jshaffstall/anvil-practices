@@ -1,5 +1,11 @@
 # Things to use for future projects
 
+## Firebase Integration
+
+See https://anvil.works/forum/t/unofficial-anvil-firebase-integration-v0-1/14557
+
+Particularly the realtime updates are attractive
+
 ## Validators
 
 https://anvil.works/forum/t/yet-another-validator-and-formatter/10607
