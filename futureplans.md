@@ -6,6 +6,10 @@ See https://anvil.works/forum/t/unofficial-anvil-firebase-integration-v0-1/14557
 
 Particularly the realtime updates are attractive
 
+## Dark/Light Mode Toggle
+
+See https://anvil.works/forum/t/change-colour-scheme-in-code-for-m3-template/14697/3
+
 ## Validators
 
 https://anvil.works/forum/t/yet-another-validator-and-formatter/10607
