@@ -1,5 +1,9 @@
 # Things to use for future projects
 
+## Canvas blurriness
+
+See https://anvil.works/forum/t/canvas-resolution-blurry/3765 to fix a blurry canvas
+
 ## Firebase Integration
 
 See https://anvil.works/forum/t/unofficial-anvil-firebase-integration-v0-1/14557
