@@ -1,5 +1,9 @@
 # Things to use for future projects
 
+## Prevent double click on buttons/links
+
+See https://anvil.works/forum/t/is-there-a-way-to-handle-double-click-as-single-click/15382/2 for how to do this for all buttons
+
 ## Canvas blurriness
 
 See https://anvil.works/forum/t/canvas-resolution-blurry/3765 to fix a blurry canvas
