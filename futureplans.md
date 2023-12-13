@@ -1,5 +1,9 @@
 # Things to use for future projects
 
+## Reactive Components
+
+See https://anvil.works/forum/t/anvil-reactive-add-reactivity-to-your-anvil-apps/19526 for a way to automatically update components as the data they depend on changes.
+
 ## Prevent double click on buttons/links
 
 See https://anvil.works/forum/t/is-there-a-way-to-handle-double-click-as-single-click/15382/2 for how to do this for all buttons
